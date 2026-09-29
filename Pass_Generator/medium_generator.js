@@ -8,17 +8,28 @@ characters = {
 };
 allCharacters = [];
 
+// get a random character from a specific array
 const getRandomCharacter = (array) => {
-  const randomIndex = Math.floor(Math.random() * array.length);
-  const randomCharacter = array[randomIndex];
+  const random = Math.floor(Math.random() * array.length);
+  const randomCharacter = array[random];
   return randomCharacter;
 };
-console.log(getRandomCharacter(characters.minuscole));
 
+// group all the character in the same array to get random characters
 for (const key in characters) {
   const currentArray = characters[key];
   for (const currentElement of currentArray) {
     allCharacters.push(currentElement);
   }
 }
-console.log(allCharacters);
+
+randomPass += getRandomCharacter(characters.minuscole);
+randomPass += getRandomCharacter(characters.maiuscole);
+randomPass += getRandomCharacter(characters.numeri);
+randomPass += getRandomCharacter(characters.simboli);
+
+for (let i = 0; i < passLength - 4; i++) {
+  randomPass += getRandomCharacter(allCharacters);
+}
+
+console.log("La password generata è: " + randomPass);
