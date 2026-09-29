@@ -32,4 +32,16 @@ for (let i = 0; i < passLength - 4; i++) {
   randomPass += getRandomCharacter(allCharacters);
 }
 
+// shuffle of characters for better password security
+const randomPassArray = randomPass.split("");
+console.log(randomPassArray);
+
+for (let i = 0; i < randomPassArray.length; i++) {
+  const j = Math.floor(Math.random() * randomPassArray.length);
+  const temp = randomPassArray[i];
+  randomPassArray[i] = randomPassArray[j];
+  randomPassArray[j] = temp;
+}
+// transform the array back in a string, and we got the final password
+randomPass = randomPassArray.join("");
 console.log("La password generata è: " + randomPass);
