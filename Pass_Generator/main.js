@@ -4,7 +4,9 @@ let randomPass = "";
 
 for (let i = 0; i < passLength; i++) {
   const randomIndex = Math.floor(Math.random() * characters.length);
-  //   console.log(element);
-  console.log(randomIndex);
+  //   console.log(randomIndex);
+  const randomCharacter = characters[randomIndex];
+  //   console.log(randomCharacter);
+  randomPass += randomCharacter;
 }
-// console.log(randomPass);
+console.log(randomPass);
