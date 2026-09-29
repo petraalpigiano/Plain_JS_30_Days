@@ -6,12 +6,19 @@ characters = {
   numeri: [2, 6, 7],
   simboli: ["@", "°", "*"],
 };
+allCharacters = [];
 
-// console.log(characters.minuscole);
 const getRandomCharacter = (array) => {
   const randomIndex = Math.floor(Math.random() * array.length);
   const randomCharacter = array[randomIndex];
   return randomCharacter;
 };
-
 console.log(getRandomCharacter(characters.minuscole));
+
+for (const key in characters) {
+  const currentArray = characters[key];
+  for (const currentElement of currentArray) {
+    allCharacters.push(currentElement);
+  }
+}
+console.log(allCharacters);
