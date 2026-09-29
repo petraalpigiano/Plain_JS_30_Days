@@ -1,10 +1,10 @@
-characters = ["a", "b", "C", "F", 8, 3, "@", "*"];
-passLength = 10;
-randomPass = "";
+const characters = ["a", "b", "C", "F", "8", "3", "@", "*", "9", "°"];
+const passLength = 10;
+let randomPass = "";
 
-for (let i = 0; i < characters.length; i++) {
-  const element = characters[i];
-  console.log(element);
-  const randomNumber = Math.ceil(Math.random());
-  console.log(randomNumber);
+for (let i = 0; i < passLength; i++) {
+  const randomIndex = Math.floor(Math.random() * characters.length);
+  //   console.log(element);
+  console.log(randomIndex);
 }
+// console.log(randomPass);
