@@ -5,4 +5,6 @@ randomPass = "";
 for (let i = 0; i < characters.length; i++) {
   const element = characters[i];
   console.log(element);
+  const randomNumber = Math.ceil(Math.random());
+  console.log(randomNumber);
 }
