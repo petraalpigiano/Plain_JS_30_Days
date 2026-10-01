@@ -1,17 +1,22 @@
-const passLength = 8;
-let randomPass = "";
-characters = {
-  minuscole: ["a", "c", "d"],
-  maiuscole: ["F", "H", "I"],
-  numeri: [2, 6, 7],
-  simboli: ["@", "°", "*"],
-};
-allCharacters = [];
+const passLength = 3;
 
-// base length validation
-if (passLength < 4) {
-  console.log("La lunghezza minima deve essere di 4 caratteri");
-} else {
+function generatePassword(passLength) {
+  // data
+  let randomPass = "";
+  const characters = {
+    minuscole: ["a", "c", "d"],
+    maiuscole: ["F", "H", "I"],
+    numeri: [2, 6, 7],
+    simboli: ["@", "°", "*"],
+  };
+  const allCharacters = [];
+  // base length validation
+  if (passLength < 4) {
+    throw new Error(
+      "La password deve avere almeno 4 caratteri: 1 minuscola, 1 maiuscola, 1 numero e 1 simbolo",
+    );
+  }
+
   // get a random character from a specific array
   const getRandomCharacter = (array) => {
     const random = Math.floor(Math.random() * array.length);
@@ -39,7 +44,7 @@ if (passLength < 4) {
 
   // shuffle of password characters for better security
   const randomPassArray = randomPass.split("");
-  console.log(randomPassArray);
+  // console.log(randomPassArray);
 
   for (let i = 0; i < randomPassArray.length; i++) {
     const j = Math.floor(Math.random() * randomPassArray.length);
@@ -49,5 +54,7 @@ if (passLength < 4) {
   }
   // transform the array back in a string, and we got the final password
   randomPass = randomPassArray.join("");
-  console.log("La password generata è: " + randomPass);
+  return randomPass;
 }
+
+console.log(generatePassword(passLength));
