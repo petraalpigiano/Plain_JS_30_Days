@@ -1,3 +1,4 @@
+export default generatePassword;
 const passLength = 3;
 
 function generatePassword(passLength) {
@@ -57,4 +58,4 @@ function generatePassword(passLength) {
   return randomPass;
 }
 
-console.log(generatePassword(passLength));
+generatePassword(passLength);

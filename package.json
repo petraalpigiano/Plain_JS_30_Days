@@ -1,0 +1,23 @@
+{
+  "name": "plain_js_30_days",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petraalpigiano/Plain_JS_30_Days.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/petraalpigiano/Plain_JS_30_Days/issues"
+  },
+  "homepage": "https://github.com/petraalpigiano/Plain_JS_30_Days#readme",
+  "description": "",
+  "devDependencies": {
+    "jest": "^30.5.2"
+  }
+}
