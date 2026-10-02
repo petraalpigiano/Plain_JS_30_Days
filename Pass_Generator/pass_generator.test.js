@@ -13,3 +13,6 @@ test("contiene almeno una lettera minuscola, una maiuscola, un simbolo, un numer
 // test() -> descrive una caratteristica/comportamento che vuoi verificare
 // expect() → verifica una singola condizione all'interno di quel comportamento.
 // [...] in una RegularExpression -> significa un insieme di caratteri tra cui cercare un singolo carattere.
+test("lancia errore per lunghezza inferiore a 4", () => {
+  expect(() => generatePassword(3)).toThrow();
+});
